@@ -3,16 +3,16 @@
     {
       "id": 0,
       "name": "Part 1",
-      "text": "This is part 1",
+      "text": "In a bustling makerspace, a young man named Alex was passionately building all sorts of things. This is part 1.",
       "options": [
         {
           "id": 0,
-          "text": "This takes you to part 2",
+          "text": "Curious to see what Alex is working on? Continue to part 2.",
           "target": 1
         },
         {
           "id": 1,
-          "text": "This takes you to part 3",
+          "text": "Interested in the tools and materials he's using? Skip to part 3.",
           "target": 2
         }
       ]
@@ -20,24 +20,76 @@
     {
       "id": 1,
       "name": "Part 2",
-      "text": "This is part 2",
+      "text": "As you approach Alex, you notice he's constructing a futuristic-looking gadget that hums with energy. This is part 2.",
       "options": [
         {
           "id": 2,
-          "text": "Go back to start",
-          "target": 0
+          "text": "Impressed by the gadget, you decide to ask Alex about its purpose.",
+          "target": 6
         }
       ]
     },
     {
       "id": 2,
       "name": "Part 3",
-      "text": "This is part 3",
+      "text": "Surveying the makerspace, you see Alex expertly using a 3D printer and laser cutter. This is part 3.",
       "options": [
         {
           "id": 4,
-          "text": "Go back to part 2",
+          "text": "Eager to learn more about the tools, you approach Alex. Go back to part 2.",
           "target": 1
+        },
+        {
+          "id": 5,
+          "text": "Intrigued by the 3D printers, you ask Alex about his role in servicing them.",
+          "target": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Part 4",
+      "text": "Alex smiles warmly and explains, 'Maintaining these 3D printers is crucial for ensuring precision and quality in our creations.' This is part 4.",
+      "options": [
+        {
+          "id": 7,
+          "text": "Curious about the servicing process, you ask Alex for a demonstration. Go back to start.",
+          "target": 0
+        },
+        {
+          "id": 8,
+          "text": "Expressing interest in learning more, you inquire about opportunities to join the makerspace community.",
+          "target": 9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Part 5",
+      "image": "3d-printer.jpg",
+      "text": "Alex enthusiastically invites you to participate in a workshop on 3D printer maintenance. This is part 5.",
+      "options": [
+        {
+          "id": 10,
+          "text": "Excited to join the workshop, you eagerly look forward to learning more. Go back to part 4.",
+          "target": 6
+        },
+        {
+          "id": 11,
+          "text": "Grateful for the invitation, you express your interest in becoming a regular member of the makerspace.",
+          "target": 12
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Part 6",
+      "text": "Welcomed into the makerspace community, you embark on a journey of creativity and innovation alongside Alex. This is part 6.",
+      "options": [
+        {
+          "id": 13,
+          "text": "Inspired by the collaborative spirit, you start your own project. Go back to start.",
+          "target": 0
         }
       ]
     }
