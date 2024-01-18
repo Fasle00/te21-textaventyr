@@ -2,7 +2,7 @@
 {% block content %}
 <main class="container">
   <hero>
-    <h1>Welome to the most amazing adventure</h1>
+    <h1>Welome {{username}} to the most amazing adventure</h1>
     <img src="/img/cover.jpg" alt="Cover image">
   </hero>
   <p>This webbpage will take you on an amazing adventure!</p>
@@ -13,6 +13,12 @@
     portal, uncertain of what lies ahead. The air shimmers with magic as you emerge into a realm where the rules of
     reality seem to bend and twist. Your most amazing adventure is about to unfold, and the secrets of Eldoria are yours
     to discover. What path will you choose in this realm of mystery and magic?</p>
+    
+    <form action="/username" method="post">
+      <label for="username">Enter your friends name:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your friends name here">
+      <input type="submit" value="Submit">
+    </form>
   <p><a href="/story/0">Please click here to begin.</a></p>
 </main>
 {% endblock %}

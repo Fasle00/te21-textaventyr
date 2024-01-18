@@ -3,11 +3,11 @@
     {
       "id": 0,
       "name": "Part 1",
-      "text": "In a bustling makerspace, a young man named Alex was passionately building all sorts of things. This is part 1.",
+      "text": "In a bustling makerspace, a young man named [USERNAME] was passionately building all sorts of things. This is part 1.",
       "options": [
         {
           "id": 0,
-          "text": "Curious to see what Alex is working on? Continue to part 2.",
+          "text": "Curious to see what [USERNAME] is working on? Continue to part 2.",
           "target": 1
         },
         {
@@ -20,11 +20,11 @@
     {
       "id": 1,
       "name": "Part 2",
-      "text": "As you approach Alex, you notice he's constructing a futuristic-looking gadget that hums with energy. This is part 2.",
+      "text": "As you approach [USERNAME], you notice he's constructing a futuristic-looking gadget that hums with energy. This is part 2.",
       "options": [
         {
           "id": 2,
-          "text": "Impressed by the gadget, you decide to ask Alex about its purpose.",
+          "text": "Impressed by the gadget, you decide to ask [USERNAME] about its purpose.",
           "target": 6
         }
       ]
@@ -32,16 +32,16 @@
     {
       "id": 2,
       "name": "Part 3",
-      "text": "Surveying the makerspace, you see Alex expertly using a 3D printer and laser cutter. This is part 3.",
+      "text": "Surveying the makerspace, you see [USERNAME] expertly using a 3D printer and laser cutter. This is part 3.",
       "options": [
         {
           "id": 4,
-          "text": "Eager to learn more about the tools, you approach Alex. Go back to part 2.",
+          "text": "Eager to learn more about the tools, you approach [USERNAME]. Go back to part 2.",
           "target": 1
         },
         {
           "id": 5,
-          "text": "Intrigued by the 3D printers, you ask Alex about his role in servicing them.",
+          "text": "Intrigued by the 3D printers, you ask [USERNAME] about his role in servicing them.",
           "target": 6
         }
       ]
@@ -49,11 +49,11 @@
     {
       "id": 6,
       "name": "Part 4",
-      "text": "Alex smiles warmly and explains, 'Maintaining these 3D printers is crucial for ensuring precision and quality in our creations.' This is part 4.",
+      "text": "[USERNAME] smiles warmly and explains, 'Maintaining these 3D printers is crucial for ensuring precision and quality in our creations.' This is part 4.",
       "options": [
         {
           "id": 7,
-          "text": "Curious about the servicing process, you ask Alex for a demonstration. Go back to start.",
+          "text": "Curious about the servicing process, you ask [USERNAME] for a demonstration. Go back to start.",
           "target": 0
         },
         {
@@ -67,7 +67,7 @@
       "id": 9,
       "name": "Part 5",
       "image": "3d-printer.jpg",
-      "text": "Alex enthusiastically invites you to participate in a workshop on 3D printer maintenance. This is part 5.",
+      "text": "[USERNAME] enthusiastically invites you to participate in a workshop on 3D printer maintenance. This is part 5.",
       "options": [
         {
           "id": 10,
@@ -84,7 +84,7 @@
     {
       "id": 12,
       "name": "Part 6",
-      "text": "Welcomed into the makerspace community, you embark on a journey of creativity and innovation alongside Alex. This is part 6.",
+      "text": "Welcomed into the makerspace community, you embark on a journey of creativity and innovation alongside [USERNAME]. This is part 6.",
       "options": [
         {
           "id": 13,
