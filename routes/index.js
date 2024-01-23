@@ -14,19 +14,19 @@ router.get('/story', function (req, res) {
     username: req.session.username,
     title: part.name, 
     part: part });
-})
-
-router.post('/username', function (req, res) {
-  req.session.username = req.body.username;
-  console.log(req.session.username);
-  res.redirect('/story/0');
-})
-
-router.get('/story/:id', function (req, res) {
-  let part = story.parts.find((part) => part.id === parseInt(req.params.id))
-  if (!part) {
-    res.status(404).render('404.njk', { title: '404' });
-    return;
+  })
+  
+  router.post('/username', function (req, res) {
+    req.session.username = req.body.username;
+    console.log(req.session.username);
+    res.redirect('/story/0');
+  })
+  
+  router.get('/story/:id', function (req, res) {
+    let part = story.parts.find((part) => part.id === parseInt(req.params.id))
+    if (!part) {
+      res.status(404).render('404.njk', { title: '404' });
+      return;
   }
   const text = part.text.replace('[USERNAME]', req.session.username);
   for (let option of part.options) {
@@ -35,5 +35,17 @@ router.get('/story/:id', function (req, res) {
   part = { ...part, text: text };
   res.render('part.njk', { title: part.name, part: part });
 })
+
+const pool = require('../db');
+
+router.get('/dbtest', async (req, res) => {
+  try {
+    const [parts] = await pool.promise().query('SELECT * FROM fabian_part');
+    res.json({ parts });
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
 
 module.exports = router;
