@@ -40,8 +40,22 @@ const pool = require('../db');
 
 router.get('/dbtest', async (req, res) => {
   try {
-    const [parts] = await pool.promise().query('SELECT * FROM fabian_part');
-    res.json({ parts });
+    const id = req.params.id;
+    const [parts] = await pool.promise().query(`SELECT * FROM fabian_part`);
+    const [options] = await pool.promise().query(`SELECT * FROM fabian_option`);
+    res.json({ parts, options });
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/dbtest/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    const [parts] = await pool.promise().query(`SELECT * FROM fabian_part WHERE id = ${id}`);
+    const [options] = await pool.promise().query(`SELECT * FROM fabian_option WHERE part_id = ${id}`);
+    res.json({ parts, options });
   } catch (error) {
     console.log(error);
     res.sendStatus(500);
