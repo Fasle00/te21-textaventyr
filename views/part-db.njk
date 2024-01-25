@@ -1,0 +1,21 @@
+{% extends "layout.njk" %}
+{% block content %}
+<main class="container">
+  {% if part %}
+  <div>
+    <h2>{{part.name}}</h2>
+    {% if part.image %}
+    <img src="/img/{{part.image}}" alt="{{part.name}}">
+    {% endif %}
+    <p>{{part.text}}</p>
+    <ul>
+      {% for option in part.options %}
+      <li><a href="/dbtest/{{option.target}}">{{option.text}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% else %}
+  <p>There is no part to display</p>
+  {% endif %}
+</main>
+{% endblock %}

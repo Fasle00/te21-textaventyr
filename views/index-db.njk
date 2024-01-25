@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+{% block content %}
+<main class="container">
+  <hero>
+    <h1>Welome {{username}} to the most amazing adventure</h1>
+    <img src="/img/cover.jpg" alt="Cover image">
+  </hero>
+  <p>This webbpage will take you on an amazing adventure!</p>
+  <p>Please insert Post code so the player can enter theire name!</p>
+  <p>As the sun sets over the mysterious land of Eldoria, you, [Your Character Name], find yourself drawn to an ancient,
+    hidden portal in the heart of your town. Whispers of an unimaginable adventure surround this enigmatic gateway, and
+    the townspeople speak of untold wonders that await beyond. Curiosity takes hold, and you decide to step through the
+    portal, uncertain of what lies ahead. The air shimmers with magic as you emerge into a realm where the rules of
+    reality seem to bend and twist. Your most amazing adventure is about to unfold, and the secrets of Eldoria are yours
+    to discover. What path will you choose in this realm of mystery and magic?</p>
+    
+    <form action="/username-db" method="post">
+      <label for="username">Enter your friends name:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your friends name here">
+      <input type="submit" value="Submit">
+    </form>
+  <p><a href="/dbtest/1">Please click here to begin.</a></p>
+</main>
+{% endblock %}
